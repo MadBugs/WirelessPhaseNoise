@@ -43,6 +43,7 @@ classdef FDChan < matlab.System
             % obj.gain, obj.dly, obj.fc
             len = length(obj.gain);
             obj.gainComplex = db2mag(obj.gain) .* exp(1i* -2*pi*rand(len,1));
+%             obj.gainComplex = db2mag(obj.gain);
                   
             % Compute unit vector in direction of each path
             az=obj.aoaAz'; el=obj.aoaEl';
